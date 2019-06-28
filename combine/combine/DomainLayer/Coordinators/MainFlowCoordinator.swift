@@ -11,16 +11,14 @@
 import UIKit
 import SwiftUI
 
-class MainFlowCoordinator {
+protocol  MainFlowCoordinatorProtocol {
+     func start(scene: UIScene, sceneDelegate: SceneDelegate)
+}
 
-    // MARK: - Singleton handler
-    static let shared =  MainFlowCoordinator()
+class MainFlowCoordinator: MainFlowCoordinatorProtocol {
 
     // MARK: - Private attributes
     private let navigationController =  UINavigationController()
-
-
-    private init() { /*This prevents others from using the default '()' initializer for this class. */ }
 
     // MARK: - Pulic methods
     func start(scene: UIScene, sceneDelegate: SceneDelegate)   {
