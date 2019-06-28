@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  combine
 //
-//  Created by JAVIER CALATRAVA LLAVERIA on 12/06/2019.
+//  Created by JAVIER CALATRAVA LLAVERIA on 28/06/2019.
 //  Copyright © 2019 JAVIER CALATRAVA LLAVERIA. All rights reserved.
 //
 
@@ -20,10 +20,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Use a UIHostingController as window root view controller
-        let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = UIHostingController(rootView: ContentView())
-        self.window = window
-        window.makeKeyAndVisible()
+        MainFlowCoordinator.shared.start(scene: scene,sceneDelegate:self)
+//        if let windowScene = scene as? UIWindowScene {
+//            let window = UIWindow(windowScene: windowScene)
+//            window.rootViewController = UIHostingController(rootView: ContentView())
+//            self.window = window
+//            window.makeKeyAndVisible()
+//        }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
