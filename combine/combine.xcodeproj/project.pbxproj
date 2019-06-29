@@ -15,6 +15,8 @@
 		5A07D53822C68AF800340D5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A07D53622C68AF800340D5F /* LaunchScreen.storyboard */; };
 		5A07D54322C68AF800340D5F /* combineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A07D54222C68AF800340D5F /* combineTests.swift */; };
 		5A07D55022C68BD600340D5F /* MainFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A07D54F22C68BD600340D5F /* MainFlowCoordinator.swift */; };
+		5A498AA322C7317300D6712C /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A498AA222C7317300D6712C /* DataManager.swift */; };
+		5A498AA622C7320A00D6712C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A498AA522C7320A00D6712C /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		5A07D54222C68AF800340D5F /* combineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = combineTests.swift; sourceTree = "<group>"; };
 		5A07D54422C68AF800340D5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A07D54F22C68BD600340D5F /* MainFlowCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainFlowCoordinator.swift; sourceTree = "<group>"; };
+		5A498AA222C7317300D6712C /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		5A498AA522C7320A00D6712C /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 		5A07D52A22C68AF400340D5F /* combine */ = {
 			isa = PBXGroup;
 			children = (
+				5A498AA122C7314B00D6712C /* DataLayer */,
 				5A07D54D22C68B0200340D5F /* DomainLayer */,
 				5A07D52B22C68AF400340D5F /* AppDelegate.swift */,
 				5A07D52D22C68AF400340D5F /* SceneDelegate.swift */,
@@ -124,6 +129,23 @@
 				5A07D54F22C68BD600340D5F /* MainFlowCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		5A498AA122C7314B00D6712C /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				5A498AA422C731A700D6712C /* Model */,
+				5A498AA222C7317300D6712C /* DataManager.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		5A498AA422C731A700D6712C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5A498AA522C7320A00D6712C /* Person.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,7 +249,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A498AA622C7320A00D6712C /* Person.swift in Sources */,
 				5A07D52C22C68AF400340D5F /* AppDelegate.swift in Sources */,
+				5A498AA322C7317300D6712C /* DataManager.swift in Sources */,
 				5A07D55022C68BD600340D5F /* MainFlowCoordinator.swift in Sources */,
 				5A07D52E22C68AF400340D5F /* SceneDelegate.swift in Sources */,
 				5A07D53022C68AF400340D5F /* ContentView.swift in Sources */,
