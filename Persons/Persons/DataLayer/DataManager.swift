@@ -6,7 +6,7 @@
 //  Copyright © 2019 JAVIER CALATRAVA LLAVERIA. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 
 protocol  DataManagerProtocol {
     func getPeople() -> [Person]

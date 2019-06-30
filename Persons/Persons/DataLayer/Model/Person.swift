@@ -6,11 +6,19 @@
 //  Copyright © 2019 JAVIER CALATRAVA LLAVERIA. All rights reserved.
 //
 
-import Foundation
+//import Foundation
 
 
 struct Person {
     
     var name:String
     var age:Int
+}
+
+extension Person:Equatable {
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        return lhs.name == rhs.name &&
+            lhs.age == rhs.age
+    }
+    
 }

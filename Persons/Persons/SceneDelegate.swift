@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  combine
+//  Persons
 //
-//  Created by JAVIER CALATRAVA LLAVERIA on 28/06/2019.
+//  Created by JAVIER CALATRAVA LLAVERIA on 30/06/2019.
 //  Copyright © 2019 JAVIER CALATRAVA LLAVERIA. All rights reserved.
 //
 
@@ -20,14 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Use a UIHostingController as window root view controller
-       // let mainFlowCoordinator:MainFlowCoordinatorProtocol = MainFlowCoordinator()
-         MainFlowCoordinator().start(scene: scene, sceneDelegate: self)
-//        if let windowScene = scene as? UIWindowScene {
-//            let window = UIWindow(windowScene: windowScene)
-//            window.rootViewController = UIHostingController(rootView: ContentView())
-//            self.window = window
-//            window.makeKeyAndVisible()
-//        }
+        MainFlowCoordinator().start(scene: scene, sceneDelegate: self)
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

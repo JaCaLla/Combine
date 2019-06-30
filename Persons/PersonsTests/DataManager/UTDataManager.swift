@@ -1,15 +1,14 @@
 //
-//  combineTests.swift
-//  combineTests
+//  UTDataManager.swift
+//  PersonsTests
 //
-//  Created by JAVIER CALATRAVA LLAVERIA on 28/06/2019.
+//  Created by JAVIER CALATRAVA LLAVERIA on 30/06/2019.
 //  Copyright © 2019 JAVIER CALATRAVA LLAVERIA. All rights reserved.
 //
 
 import XCTest
-@testable import combine
-
-class combineTests: XCTestCase {
+@testable import Persons
+class UTDataManager: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,9 +18,10 @@ class combineTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
+    func test_getPeople() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssertEqual(DataManager().getPeople(), [])
     }
 
     func testPerformanceExample() {

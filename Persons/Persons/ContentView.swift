@@ -1,8 +1,8 @@
 //
 //  ContentView.swift
-//  combine
+//  Persons
 //
-//  Created by JAVIER CALATRAVA LLAVERIA on 28/06/2019.
+//  Created by JAVIER CALATRAVA LLAVERIA on 30/06/2019.
 //  Copyright © 2019 JAVIER CALATRAVA LLAVERIA. All rights reserved.
 //
 
