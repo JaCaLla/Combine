@@ -21,7 +21,27 @@ class UTDataManager: XCTestCase {
     func test_getPeople() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertEqual(DataManager().getPeople(), [])
+        XCTAssertEqual(DataManager().getPeople(),[Person(name: "Alice", age: 34), Person(name: "Bob", age: 44)])
+    }
+    
+    func test_removePerson() {
+        // This is an example of a functional test case.
+        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let dataManager = DataManager()
+        dataManager.remove(person: Person(name: "Bob", age: 44))
+        XCTAssertEqual(dataManager.getPeople(),[Person(name: "Alice", age: 34)])
+    }
+    
+    func test_updatePerson() {
+        let dataManager = DataManager()
+        dataManager.update(person: Person(name: "Bob", age: 44), newPerson: Person(name: "Candy", age: 40))
+        XCTAssertEqual(dataManager.getPeople(),[Person(name: "Alice", age: 34),Person(name: "Candy", age: 40)])
+    }
+    
+    func test_createPerson() {
+        let dataManager = DataManager()
+        dataManager.append(person:  Person(name: "Candy", age: 40))
+        XCTAssertEqual(dataManager.getPeople(),[Person(name: "Alice", age: 34), Person(name: "Bob", age: 44),Person(name: "Candy", age: 40)])
     }
 
     func testPerformanceExample() {
